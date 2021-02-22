@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="JavaFX">
+    <CLASSES>
+      <root url="file://$USER_HOME$/javafx-sdk-15.0.1/lib" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="https://docs.oracle.com/javase/8/javafx/api" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$USER_HOME$/javafx-sdk-15.0.1/lib" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$USER_HOME$/javafx-sdk-15.0.1/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/javafx-sdk-15.0.1/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/javafx-sdk-15.0.1/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
