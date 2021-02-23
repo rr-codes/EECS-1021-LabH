@@ -28,17 +28,10 @@ public class Controller implements SerialPortMessageListenerWithExceptions {
 
     @Override
     public void serialEvent(SerialPortEvent serialPortEvent) {
-        if (serialPortEvent.getEventType() != SerialPort.LISTENING_EVENT_DATA_RECEIVED) {
-            return;
-        }
-
-        var data = serialPortEvent.getReceivedData();
-        var value = ByteBuffer.wrap(data).getInt();
-
-        var time = System.currentTimeMillis();
-        var dataPoint = new DataPoint(time, value);
-
-        this.dataPoints.add(dataPoint);
+        // the serialPortEvent receives a byte array containing 4 bytes
+        // this array has to be first converted to an int
+        // then, create a {@code DataPoint} instance using the current time and the value
+        // and add it to the {@code dataPoints} list
     }
 
     @Override

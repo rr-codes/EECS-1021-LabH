@@ -20,27 +20,6 @@ public class DataPoint {
         this.valueProperty = new SimpleIntegerProperty(value).asObject();
     }
 
-    public long getTime() {
-        return timeProperty.getValue();
-    }
-
-    public int getValue() {
-        return valueProperty.getValue();
-    }
-
-    public void setTime(long time) {
-        timeProperty.setValue(time);
-    }
-
-    public void setValue(int value) {
-        valueProperty.setValue(value);
-    }
-
-    ObservableValue<Long> timeProperty() {
-        return this.timeProperty;
-    }
-
-    ObservableValue<Integer> valueProperty() {
-        return this.valueProperty;
-    }
+    // There is some missing methods here. You can infer what they should be
+    // from those present in the {@code WeightedGrade} class
 }

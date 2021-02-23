@@ -18,9 +18,8 @@ public class Controller implements ListChangeListener<WeightedGrade> {
      * Creates a new {@code Controller}, and starts listening to the new {@code ObservableList} of grades
      */
     public Controller() {
-        this.weightedGrades = FXCollections.observableArrayList();
-        this.gradeProperty = new SimpleDoubleProperty(0);
-        this.weightedGrades.addListener(this);
+        // 1. initialize `this.weightedGrades` and `this.gradeProperty`
+        // 2. Add `this` as a listener to `this.weightedGrades`
     }
 
     /**
@@ -37,7 +36,7 @@ public class Controller implements ListChangeListener<WeightedGrade> {
      * @see javafx.beans.property.Property
      */
     public DoubleProperty finalGradeProperty() {
-        return this.gradeProperty;
+        // return the grade property
     }
 
     /**
@@ -46,7 +45,7 @@ public class Controller implements ListChangeListener<WeightedGrade> {
      * @param weight the raw weight, out of 100
      */
     public void addWeightedGrade(int grade, int weight) {
-        this.weightedGrades.add(new WeightedGrade(grade, weight));
+        // create a WeightedGrade instance and add it to the list
     }
 
     /**
@@ -61,10 +60,7 @@ public class Controller implements ListChangeListener<WeightedGrade> {
     @Override
     public void onChanged(Change<? extends WeightedGrade> change) {
         var list = change.getList();
-        var newGrade = list.stream()
-                .mapToDouble(g -> g.getGrade() / 100.0 * g.getWeight())
-                .sum();
 
-        this.gradeProperty.set(newGrade);
+        // what should happen here?
     }
 }

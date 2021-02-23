@@ -23,7 +23,9 @@ public class Main extends Application {
         slider.setMax(100.0);
 
         var label = new Label();
-        label.textProperty().bind(slider.valueProperty().asString("I am %.0f years old"));
+
+        // Bind the text property of the label to the value of the slider, formatted
+        // as {@code "I am <age> years old"}
 
         hbox.getChildren().addAll(slider, label);
         return hbox;
@@ -40,9 +42,8 @@ public class Main extends Application {
 
         button.disableProperty().bind(textField.textProperty().isEmpty());
 
-        button.textProperty().bind(
-            Bindings.when(textField.textProperty().isEmpty()).then("Disabled").otherwise("Enabled")
-        );
+        // Bind the text property of the button so that when the text field is empty, the
+        // button's text is {@code "Disabled"}. Otherwise, it should say {@code "Enabled"}
 
         hbox.getChildren().addAll(textField, button);
         return hbox;
