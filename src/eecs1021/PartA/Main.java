@@ -1,7 +1,6 @@
 package eecs1021.PartA;
 
 import javafx.application.Application;
-import javafx.beans.binding.Bindings;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -14,6 +13,10 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     private Node makeSliderRow() {
         var hbox = new HBox();
         hbox.setSpacing(10.0);
@@ -24,8 +27,9 @@ public class Main extends Application {
 
         var label = new Label();
 
-        // Bind the text property of the label to the value of the slider, formatted
-        // as {@code "I am <age> years old"}
+        /*
+        TODO: Bind the text property of the label to the value of the slider, formatted as {@code "I am <age> years old"}
+         */
 
         hbox.getChildren().addAll(slider, label);
         return hbox;
@@ -42,15 +46,13 @@ public class Main extends Application {
 
         button.disableProperty().bind(textField.textProperty().isEmpty());
 
-        // Bind the text property of the button so that when the text field is empty, the
-        // button's text is {@code "Disabled"}. Otherwise, it should say {@code "Enabled"}
+        /*
+        TODO: Bind the text property of the button so that when the text field is empty, the button's text is
+         {@code "Disabled"}. Otherwise, it should say {@code "Enabled"}
+         */
 
         hbox.getChildren().addAll(textField, button);
         return hbox;
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 
     @Override
