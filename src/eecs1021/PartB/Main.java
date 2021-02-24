@@ -73,7 +73,9 @@ public class Main extends Application {
 
         var label = new Label("");
 
-        // 1. Bind the text property of the label to the final grade property of the controller
+        /*
+        TODO: Bind the text property of the label to the final grade property of the controller
+         */
 
         var table = new TableView<WeightedGrade>();
 
@@ -87,7 +89,10 @@ public class Main extends Application {
         addWeightTextField.setPromptText("Weight");
 
         var addWeightedGradeButton = new Button("Add");
-        // 2. What should happen when the button is clicked?
+
+        /*
+        TODO: What should happen when the button is clicked?
+         */
 
         var hbox = new HBox();
         hbox.getChildren().addAll(addGradeTextField, addWeightTextField, addWeightedGradeButton);

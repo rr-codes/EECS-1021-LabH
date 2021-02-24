@@ -18,8 +18,12 @@ public class Controller implements ListChangeListener<WeightedGrade> {
      * Creates a new {@code Controller}, and starts listening to the new {@code ObservableList} of grades
      */
     public Controller() {
-        // 1. initialize `this.weightedGrades` and `this.gradeProperty`
-        // 2. Add `this` as a listener to `this.weightedGrades`
+        /*
+        TODO: Initialize `this.weightedGrades` and `this.gradeProperty`, then add `this` as a
+          listener to `this.weightedGrades`
+         */
+        this.weightedGrades = null;
+        this.gradeProperty = null;
     }
 
     /**
@@ -36,7 +40,8 @@ public class Controller implements ListChangeListener<WeightedGrade> {
      * @see javafx.beans.property.Property
      */
     public DoubleProperty finalGradeProperty() {
-        // return the grade property
+        // TODO: return the grade property
+        return null;
     }
 
     /**
@@ -45,7 +50,7 @@ public class Controller implements ListChangeListener<WeightedGrade> {
      * @param weight the raw weight, out of 100
      */
     public void addWeightedGrade(int grade, int weight) {
-        // create a WeightedGrade instance and add it to the list
+        // TODO: create a WeightedGrade instance and add it to the list
     }
 
     /**
@@ -61,6 +66,6 @@ public class Controller implements ListChangeListener<WeightedGrade> {
     public void onChanged(Change<? extends WeightedGrade> change) {
         var list = change.getList();
 
-        // what should happen here?
+        // TODO: what should happen here?
     }
 }
