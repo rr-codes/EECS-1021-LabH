@@ -20,6 +20,7 @@ public class DataPoint {
         this.valueProperty = new SimpleIntegerProperty(value).asObject();
     }
 
+    // TODO:
     // There is some missing methods here. You can infer what they should be
     // from those present in the {@code WeightedGrade} class
 }
