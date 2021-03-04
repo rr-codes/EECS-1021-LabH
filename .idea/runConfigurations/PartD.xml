@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="PartB" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="eecs1021.PartB.Main" />
+  <configuration default="false" name="PartD" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="eecs1021.PartD.Main" />
     <module name="LabG" />
     <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/javafx-sdk-15.0.1/lib --add-modules=javafx.controls,javafx.fxml" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="eecs1021.PartB.*" />
+        <option name="PATTERN" value="eecs1021.PartD.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

@@ -29,10 +29,10 @@ public class Controller implements SerialPortMessageListenerWithExceptions {
     @Override
     public void serialEvent(SerialPortEvent serialPortEvent) {
         // TODO:
-        // the serialPortEvent receives a byte array containing 4 bytes
-        // this array has to be first converted to an int
-        // then, create a {@code DataPoint} instance using the current time and the value
-        // and add it to the {@code dataPoints} list
+        //  the serialPortEvent receives a byte array containing 4 bytes
+        //  this array has to be first converted to an int
+        //  then, create a {@code DataPoint} instance using the current time and the value
+        //  and add it to the {@code dataPoints} list
     }
 
     @Override

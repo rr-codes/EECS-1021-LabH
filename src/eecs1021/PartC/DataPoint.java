@@ -1,26 +1,16 @@
 package eecs1021.PartC;
 
-import javafx.beans.property.Property;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.LongProperty;
 
 public class DataPoint {
-    private final Property<Long> timeProperty;
-    private final Property<Integer> valueProperty;
+    private final LongProperty timeProperty;
+    private final IntegerProperty valueProperty;
 
-    public DataPoint(long time, int value) {
-        this.timeProperty = new SimpleLongProperty(time).asObject();
-        this.valueProperty = new SimpleIntegerProperty(value).asObject();
-    }
+    // TODO: Create a constructor. It should have two parameters of types {@code long} and {@code int}.
+    //  In its body, it should create properties from those parameters, then assign those to the
+    //  fields of the class.
 
-    // TODO:
-    // There is some missing methods here. You can infer what they should be
-    // from those present in the {@code WeightedGrade} class
+
+    // TODO: Create two 'getter' methods, one for each property field
 }
