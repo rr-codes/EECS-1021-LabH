@@ -28,21 +28,7 @@ To set up the project in IntelliJ:
 2. Extract the ZIP file
 3. Open IntelliJ, then click `Open Project` and select the project to open it
 
-There are three parts to this lab; each part is separated into its own Java _package_ (directory / folder).
-
-## Tips and Tricks
-
-- Suppose you have a class `Foo` whose constructor takes two parameters, `a` and `b`, both of type `int`. To create an instance of `Foo`, you can do
-```
-Foo myFoo = new Foo(1, 2); // `1` is `a`, `2` is `b`
-```
-
-- To initialize an `ObservableList`, you do `... = FXCollections.observableArrayList()`
-- When the button to add a grade is clicked, several things should happen:
-    1. The two values of the text fields should be retrieved. Assuming you have a `TextField` names `tf`, you do this via `Integer.parseInt(tf.getText())`
-    2. The `addWeightedGrade` method of your controller should be invoked using the two retrieved text field values.
-    3. Both text fields should be cleared. To do this for a `TextField` called `tf`, use `tf.clear()`
-- If you have a `StringProperty` (`a`) that needs to be bound to a non-String property (`b`), you can use `a.bind(b.asString())` 
+There are two parts to this lab; each part is separated into its own Java _package_ (directory / folder).
 
 ## Part A
 
@@ -94,18 +80,8 @@ In Part A, there are two comments with instructions describing what needs to be 
 
 **Hint**: One of the bindings you will have to make is a _conditional binding_, using [`Bindings.when`](https://docs.oracle.com/javase/8/javafx/api/javafx/beans/binding/Bindings.html#when-javafx.beans.value.ObservableBooleanValue-).
 
-## Part C
+## Part B
 
-In Part C, you will be transmitting timestamped data from your Arduino's potentiometer readings to a JavaFX TableView.
+In Part B, you will be transmitting the value of a JavaFX Slider to your Arduino's OLED.
 
-There are two tasks in this part. 
-
-In the first task, you are given some pieces of the `DataPoint` class. You have to implement the rest of the class. The `DataPoint` class is again a _JavaFX Java Beans model class_, so the structure should be trivially similar to the `WeightedGrade` class in Part 2, just with a few minor changes.
-
-For the second task, you are responsible for implementing the `serialEvent()` method of Part C's `Controller`. The logic of this method should work like this:
-1. The first thing you have to do is check if the event's type matches `SerialPort.LISTENING_EVENT_DATA_RECEIVED`. If it does not, stop the method by using `return`. Otherwise, proceed to the rest of the method.
-2. Get the raw byte array from the event. To do this, use the `getReceivedData()` method of the serial port event.
-3. Convert the byte array to an `int`. To do this, use `ByteBuffer.wrap(data).getInt()` (assuming `data` is the name of the byte array).
-4. Get the current timestamp. To do this, use `System.currentTimeMillis()`.
-5. Create an instance of the `DataPoint` class using the timestamp and the new `int` value.
-6. Add the data point instance to `this.dataPoints`
+For this part, all that is required is to send the data to the Arduino by 'listening' to the value of the slider's `valueProperty()`; when the property's value changes, it should be sent to the Arduino port's output stream.
