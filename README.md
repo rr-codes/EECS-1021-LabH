@@ -13,7 +13,6 @@
 * [Tips and Tricks](#tips-and-tricks)
 * [Part A](#part-a)
 * [Part B](#part-b)
-* [Part C](#part-c)
 
 ----
 
